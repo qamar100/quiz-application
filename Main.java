@@ -5,7 +5,6 @@ public class Main {
        LoginPage loginPage= new LoginPage();
      //  Rules rules = new Rules(" ");
         
-
     }
 }
  

@@ -1,9 +1,6 @@
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.*;
-
-import javax.print.DocFlavor.STRING;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -100,9 +97,9 @@ public class LoginPage extends JFrame implements ActionListener {
     
     if(e.getSource()==rulesButton){
     
-      String username =textField.getText();  // gettextfuntion returns string so our textfield in which we stored our username will be saved into our username variable  
+      String examCode =textField3.getText();  // gettextfuntion returns string so our textfield in which we stored our username will be saved into our username variable  
       frame.setVisible(false);  // Closing the our current frame (loginframe) 
-      Rules rules = new Rules(username); //CALLING A PAREMTERIZED CONSTRUCTOR
+      Rules rules = new Rules(examCode); //CALLING A PAREMTERIZED CONSTRUCTOR
     
       }
     /* if(e.getSource()==startQuiz){

@@ -16,6 +16,7 @@ public class Rules extends JFrame implements ActionListener {
      JLabel rules4 = new JLabel();
      JButton backButton= new JButton();
      JButton startQuiz = new JButton();
+     String usernameStr = "";
 
     Rules(String username){  //parametarized constructor, passing our username as a constructor
 
@@ -78,6 +79,7 @@ public class Rules extends JFrame implements ActionListener {
         frame.add(rules);
         frame.add(welcomLabel);
         frame.setVisible(true);
+        usernameStr = username;
 
     }
     public void actionPerformed(ActionEvent e){
@@ -88,7 +90,7 @@ public class Rules extends JFrame implements ActionListener {
         }
         if(e.getSource()==startQuiz){
             frame.setVisible(false);
-            Quiz quiz = new Quiz();
+            Quiz quiz = new Quiz(usernameStr);
         }
 
     }
