@@ -100,12 +100,7 @@ public class LoginPage extends JFrame implements ActionListener {
       String examCode =textField3.getText();  // gettextfuntion returns string so our textfield in which we stored our username will be saved into our username variable  
       frame.setVisible(false);  // Closing the our current frame (loginframe) 
       Rules rules = new Rules(examCode); //CALLING A PAREMTERIZED CONSTRUCTOR
-    
       }
-    /* if(e.getSource()==startQuiz){
-        Quiz quiz = new Quiz();  //calls the constructor of quiz( why we are doing every thing in a constructor)
-    }  */
-
   }
 
 }

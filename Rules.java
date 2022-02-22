@@ -16,9 +16,9 @@ public class Rules extends JFrame implements ActionListener {
      JLabel rules4 = new JLabel();
      JButton backButton= new JButton();
      JButton startQuiz = new JButton();
-     String usernameStr = "";
+     String examcode = "";
 
-    Rules(String username){  //parametarized constructor, passing our username as a constructor
+    Rules(String examCode){  //parametarized constructor, passing our username as a constructor
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(750,650);
@@ -29,7 +29,7 @@ public class Rules extends JFrame implements ActionListener {
         welcomLabel.setBounds(80,0,400,100);
         welcomLabel.setForeground(new Color(25,255,0)); 
         welcomLabel.setFont(new Font("Mv Boli",Font.PLAIN,30));
-        welcomLabel.setText("WELCOME "+username);
+        welcomLabel.setText("WELCOME "+examCode);
       
         
 
@@ -79,7 +79,7 @@ public class Rules extends JFrame implements ActionListener {
         frame.add(rules);
         frame.add(welcomLabel);
         frame.setVisible(true);
-        usernameStr = username;
+        this.examcode = examCode;
 
     }
     public void actionPerformed(ActionEvent e){
@@ -90,7 +90,7 @@ public class Rules extends JFrame implements ActionListener {
         }
         if(e.getSource()==startQuiz){
             frame.setVisible(false);
-            Quiz quiz = new Quiz(usernameStr);
+            Quiz quiz = new Quiz(examcode);
         }
 
     }
