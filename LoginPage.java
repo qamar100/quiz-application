@@ -97,9 +97,10 @@ public class LoginPage extends JFrame implements ActionListener {
     
     if(e.getSource()==rulesButton){
     
-      String examCode =textField3.getText();  // gettextfuntion returns string so our textfield in which we stored our username will be saved into our username variable  
+      String Username =textField.getText();  // gettextfuntion returns string so our textfield in which we stored our username will be saved into our username variable  
+     String examCode = textField3.getText();
       frame.setVisible(false);  // Closing the our current frame (loginframe) 
-      Rules rules = new Rules(examCode); //CALLING A PAREMTERIZED CONSTRUCTOR
+      Rules rules = new Rules(Username,examCode); //CALLING A PAREMTERIZED CONSTRUCTOR
       }
   }
 

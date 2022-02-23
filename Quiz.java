@@ -25,7 +25,7 @@ class Exam {
         getExam(examCode);
     }
 
-    public void getExam(String param) {
+    public void getExam(String param) {  // taking exam code as an arugument
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
@@ -77,9 +77,9 @@ public class Quiz extends JFrame implements ActionListener {
                 displayAnswer();
             }
         }
-    }); // closing time instantiation
+    }); // closing time instantiation 
 
-    public Quiz(String param) // constructor
+    public Quiz(String param) // parameterized constructor taking exam code
     {
         try {
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// to close the window
